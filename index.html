@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(35, 35, 51);
+      }
+      .container {
+        width: 600px;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .selectMovie {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .select-header {
+        font-size: 20px;
+        color: #fff;
+      }
+      select {
+        width: 200px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .seat-availability {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 300px;
+        height: 30px;
+        background-color: rgb(112, 112, 112);
+        padding: 5px 15px;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+      .seat {
+        width: 20px;
+        height: 20px;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        background-color: #c0c0c0;
+      }
+      .seat-span {
+        color: rgb(226, 226, 226);
+        font-size: 18px;
+      }
+      .selected-seat {
+        background-color: aqua;
+      }
+      .occ-seat {
+        background-color: white;
+      }
+      .select-seats {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .screen {
+        width: 250px;
+        height: 80px;
+        background-color: #fff;
+        box-shadow: 10px 10px 10px 20px #fff;
+      }
+      .seats{
+        margin-top: 60px;
+      }
+      .row{
+        display: flex;
+        gap: 7px;
+        margin: 7px 0;
+      }
+      .ticket-price{
+        margin-top: 70px;
+      }
+      .ticket-info{
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+      }
+      .countOfSeats, .price{
+        color: rgb(36, 172, 172);
+      }
+      .leftTwoRows{
+        margin-right: 10px;
+      }
+      .rightTwoRows{
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="selectMovie">
+        <h2 class="select-header">Select a Movie</h2>
+        <select name="movie" id="movie" >
+
+        </select>
+      </div>
+      <div class="seat-availability">
+        <div>
+          <button class="seat"></button>
+          <span class="seat-span">N/A</span>
+        </div>
+        <div>
+          <button class="seat selected-seat"></button>
+          <span class="seat-span">Selected</span>
+        </div>
+        <div>
+          <button class="seat occ-seat"></button>
+          <span class="seat-span">Occupied</span>
+        </div>
+      </div>
+      <div class="select-seats">
+        <div class="screen"></div>
+        <div class="seats">
+          <div class="row">
+            <div class="seat" id="id"></div>
+            <div class="seat leftTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat rightTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="id"></div>
+            <div class="seat leftTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat rightTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="id"></div>
+            <div class="seat leftTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat rightTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="id"></div>
+            <div class="seat leftTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat rightTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="id"></div>
+            <div class="seat leftTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat" id="id"></div>
+            <div class="seat rightTwoRows" id="id"></div>
+            <div class="seat" id="id"></div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="ticket-price">
+        <p class="ticket-info">Seçtiğiniz <span class="countOfSeats">0</span> koltuk için ücret <span class="price">0</span>₺</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
